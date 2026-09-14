@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct ProductXApp: App {
+    @State private var store = SubscriptionStore()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            SubscriptionListView()
+                .environment(store)        }
     }
 }
